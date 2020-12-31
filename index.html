@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UpLoad Ảnh Miễn Phí</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <base >
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+</head>
+<body>
+    <div class="container-fluid viewport">
+        <h1>Chọn Ảnh Cần Up</h1>
+        <button id="image-select-button" class="btn btn-default">Chọn</button>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="status" class="hide extra"></div>
+                <div id="quick-copy" class="hide extra">
+                    <label for="direct-link">Direct Link</label>
+                    <div class="input-group">
+                        <input id="direct-link" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" data-clipboard-target="direct-link" disabled="disabled" class="copy-button btn btn-default">:(</button>
+                        </span>
+                    </div>
+                    <label for="forum-code">BBCode / Forums</label>
+                    <div class="input-group">
+                        <input id="forum-code" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" data-clipboard-target="forum-code" disabled="disabled" class="copy-button btn btn-default">:(</button>
+                        </span>
+                    </div>
+                    <label for="common-mark">Markdown / Common Mark</label>
+                    <div class="input-group">
+                        <input id="common-mark" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" data-clipboard-target="common-mark" disabled="disabled" class="copy-button btn btn-default">:(</button>
+                        </span>
+                    </div>
+                </div>
+                <div id="multiple" class="hide extra">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="tab active" link="multiple-direct-link"><a href="#">Direct Link</a></li>
+                        <li role="presentation" class="tab" link="multiple-bbcode"><a href="#">BBCode</a></li>
+                        <li role="presentation" class="tab" link="multiple-markdown"><a href="#">Markdown</a></li>
+                    </ul>
+                    <textarea id="multiple-direct-link" class="container" wrap="off"></textarea>
+                    <textarea id="multiple-bbcode" class="container hide" wrap="off"></textarea>
+                    <textarea id="multiple-markdown" class="container hide" wrap="off"></textarea>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <canvas id="original" class="image img-rounded hide"></canvas>
+                <canvas id="processed" class="image img-rounded hide"></canvas>
+                <img id="uploaded" class="image img-rounded hide">
+            </div>
+        </div>
+        <input id="file-input" class="hide">
+    </div>
+
+    <script src="assets/js/lib.js"></script>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
