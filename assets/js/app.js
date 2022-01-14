@@ -104,7 +104,7 @@
             } else console.log("UpIMGApp: upload failed for '" + i.name + "'")
         }
         console.log("UpIMGApp: starting app");
-        var p = "https://2.pik.vn/",
+        var p = "api.php",
             l = p,
             d = 1200,
             c = {
