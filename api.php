@@ -9,7 +9,7 @@ $data = str_replace("data:image/jpeg;base64,", "",$data);
 //echo $data; exit;
 $data = base64_decode($data);
 $name_file = "img/".time()."_".md5(rand(0,999999999)).".".$type;
-$url['saved'] = "https://upanh.tech/".$name_file;
+$url['saved'] = "https://duyplus.github.io/UpIMG/".$name_file;
 file_put_contents($name_file,$data);
 echo json_encode($url);
 
